@@ -1,0 +1,37 @@
+<mat-card>
+    <mat-card-title>
+        <h3>
+            {{data.sectionTitle}}
+        </h3>
+    </mat-card-title>
+    <mat-card-content>
+        <div class="order-data-card-container">
+            <p><b>{{data.firstDataTitle}}:</b></p>
+            <p>{{data.firstData}}</p>
+
+            <p><b>{{data.secondDataTitle}}</b>:</p>
+            <p>{{data.secondData}}</p>
+
+            <div *ngIf="this.displayDateSelector">
+                <mat-form-field appearance="outline" style="font-size: 12px; width: 100%;">
+                    <input matInput [matDatepicker]="picker">
+                    <mat-label>Expected Ship Date</mat-label>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+<style>
+    mat-card {
+        width: 20vh;
+        margin: 15px;
+        height: 23vh;
+    }
+
+    p.order-data-card-container {
+        padding: 0px;
+    }
+</style>

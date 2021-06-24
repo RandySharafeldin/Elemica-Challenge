@@ -1,0 +1,81 @@
+<div class="mat-card-container">
+    <mat-card class="card">
+        <mat-card-header>
+            <div class="title-container">
+                <div class="left-title">
+                    <p><b>{{titlePrefix}}: </b>{{orderTitle}}</p>
+                    <mat-icon>assignment</mat-icon>
+                    <mat-icon>attachment</mat-icon>
+                </div>
+                <div class="right-title">
+                    <button class="schedule-button" mat-flat-button>
+                        <p>
+                            <mat-icon>add</mat-icon><b>ADD SCHEUDLE</b>
+                        </p>
+                    </button>
+                    <mat-button-toggle-group>
+                        <mat-button-toggle value="Accept">ACCEPT</mat-button-toggle>
+                        <mat-button-toggle value="Reject">REJECT</mat-button-toggle>
+                        <mat-button-toggle value="Change">CHANGE</mat-button-toggle>
+                    </mat-button-toggle-group>
+                </div>
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <div style="display: inline-flex;">
+                <div style="padding: 20px; width: 25%;">
+                    <app-shipping-data-pannel></app-shipping-data-pannel>
+                </div>
+                <div style="display: inline-flex; ">
+                    <app-order-data-card [data]="this.firstCard"></app-order-data-card>
+                    <app-order-data-card [data]="this.secondCard" [displayDateSelector]="true"></app-order-data-card>
+                    <app-order-data-card [data]="this.thirdCard"></app-order-data-card>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+
+
+<style>
+    mat-card {
+        padding: 0;
+    }
+
+    mat-card-header {
+        background: lightblue;
+    }
+
+    .mat-card-container {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .card {
+        width: 55vw;
+        height: 60vh;
+    }
+
+    .title-container {
+        display: flex;
+        width: 100%;
+    }
+
+    .left-title {
+        width: 50%;
+        display: flex;
+        align-items: center;
+    }
+
+    .right-title {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    mat-icon.schedule-button {
+        vertical-align: center;
+    }
+</style>
