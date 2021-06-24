@@ -11,7 +11,9 @@ export class ShippingDataPannelComponent implements OnInit {
   constructor() { }
 
   discription =  "Table Salt, 100KG Tanks"
-  shipTo = "Amsterdam 1234 Tulipo Lane Ludwisgshasfen DE 12346"
+  shipToCity = "Amsterdam"
+  shipToStreet = "1234 Tulipo Lane"
+  shipToProvince = "Ludwisgshasfen DE 12346"
   suppId = "12341723661"
   upc = "121238723001"
   contract = "23081090910"

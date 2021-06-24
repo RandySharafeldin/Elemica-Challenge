@@ -10,6 +10,23 @@ export class PurchaseConfirmationCardComponent implements OnInit {
   titlePrefix = "Line 0010"
   orderTitle = "NaCl (Sodium Chloride)"
 
+  status = 0;
+
+  statusTexts = [
+    {
+      iconName: "warning",
+      text: "Once you click submit below, your Buyer will recieve your order confirmation."
+    },
+    {
+      iconName: "thumb_down_alt",
+      text: "Once you click submit below, your Buyer will recieve that you've rejected the order."
+    },
+    {
+      iconName: "edit",
+      text: "Once you click submit below, you will be prompted to edit this order."
+    }
+  ]
+
   firstCard = {
     sectionTitle: "Quantity",
     firstDataTitle: "Ordered",

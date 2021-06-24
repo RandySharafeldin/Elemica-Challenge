@@ -15,6 +15,8 @@ import {MatInputModule} from '@angular/material/input';
 import { OrderDataCardComponent } from './components/order-data-card/order-data-card.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { DetailsExpanseComponent } from './components/details-expanse/details-expanse.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 @NgModule({
@@ -23,6 +25,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     PurchaseConfirmationCardComponent,
     ShippingDataPannelComponent,
     OrderDataCardComponent,
+    DetailsExpanseComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

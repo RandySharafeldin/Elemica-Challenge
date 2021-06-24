@@ -22,14 +22,27 @@
             </div>
         </mat-card-header>
         <mat-card-content>
-            <div style="display: inline-flex;">
-                <div style="padding: 20px; width: 25%;">
-                    <app-shipping-data-pannel></app-shipping-data-pannel>
+            <div>
+                <div style="display: inline-flex;">
+                    <div style="padding: 20px; width: 25%;">
+                        <app-shipping-data-pannel></app-shipping-data-pannel>
+                    </div>
+                    <div style="display: inline-flex; ">
+                        <app-order-data-card [data]="this.firstCard"></app-order-data-card>
+                        <app-order-data-card [data]="this.secondCard" [displayDateSelector]="true">
+                        </app-order-data-card>
+                        <app-order-data-card [data]="this.thirdCard"></app-order-data-card>
+                    </div>
                 </div>
-                <div style="display: inline-flex; ">
-                    <app-order-data-card [data]="this.firstCard"></app-order-data-card>
-                    <app-order-data-card [data]="this.secondCard" [displayDateSelector]="true"></app-order-data-card>
-                    <app-order-data-card [data]="this.thirdCard"></app-order-data-card>
+                <div style="margin-left: 35%; background-color: rgb(202, 238, 202); margin-right: 15px;">
+                    <span>
+                        <p>
+                            <mat-icon>{{statusTexts[status].iconName}}</mat-icon> {{statusTexts[status].text}}
+                        </p>
+                    </span>
+                </div>
+                <div style="width: 100%; padding-bottom: 20px;">
+                    <app-details-expanse></app-details-expanse>
                 </div>
             </div>
         </mat-card-content>
@@ -55,7 +68,7 @@
 
     .card {
         width: 55vw;
-        height: 60vh;
+        height: fit-content;
     }
 
     .title-container {

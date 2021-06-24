@@ -1,0 +1,45 @@
+<div style="display: flex; width: 100%; justify-content: center;">
+    <mat-accordion style="flex-shrink: 0; width: 95%">
+        <mat-expansion-panel [expanded]="true" class="mat-elevation-z0" style="background: rgb(250, 245, 245);">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <b>Addition Details</b>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="panel-info-container" style="height: fit-content; padding-bottom: 0px;">
+                <div class="info-column">
+                    <p><b>Product Grade Description:</b></p>
+                    <p>Corax N 339</p>
+                    <p>Specification: 0123456789</p>
+                    <p>Issue: 003</p>
+                    <p>Producer: Orion Engineer</p>
+                </div>
+                <div class="info-column">
+                    <p><b>Transoport Method: </b> Road</p>
+                    <p><b>inco Terms (Location):</b> CPT </p>
+                    <p>(Weißandt-Gölzau)</p>
+                    <p><b>Unloading Point:</b> Amsterdam</p>
+                </div>
+                <div class="info-column">
+                    <p><b>Ship To Contact</b> Alan Dowl</p>
+                    <p>Phone: (770) 444-4444</p>
+                    <p>Fax: (770) 444-4444</p>
+                </div>
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>
+<style>
+    .panel-info-container {
+        display: inline-flex;
+    }
+
+    .info-column {
+        display: block;
+        padding-right: 25px;
+    }
+
+    .info-column p {
+        margin: 0px;
+    }
+</style>

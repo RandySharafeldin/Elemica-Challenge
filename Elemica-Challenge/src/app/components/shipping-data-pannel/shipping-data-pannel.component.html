@@ -1,7 +1,9 @@
 <div style="display: flex;">
     <div class="shipping-data-container">
         <p><b>Description: </b> {{this.discription}}</p>
-        <p><b>Ship To: </b> {{this.shipTo}}</p>
+        <p><b>Ship To: </b> {{this.shipToCity}}</p>
+        <p>{{this.shipToStreet}}</p>
+        <p>{{this.shipToProvince}}</p>
         <p><b>Supplier Product ID: </b> {{this.suppId}}</p>
         <p><b>UPC Number: </b> {{this.upc}}</p>
         <p><b>Contract Number: </b> {{this.contract}}</p>
@@ -19,6 +21,10 @@
     .shipping-data-container {
         display: block;
         width: 100%;
+    }
+
+    .shipping-data-container p {
+        margin: 5px;
     }
 
     mat-divider {
