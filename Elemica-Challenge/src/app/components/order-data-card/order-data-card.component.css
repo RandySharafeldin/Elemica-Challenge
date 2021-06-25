@@ -1,0 +1,18 @@
+@import "../../../styles.css";
+
+mat-card {
+    width: 10vw;
+    margin: 15px;
+    min-height: 23vh;
+    border-color: rgb(238, 240, 245);
+    border-style: solid;
+    border-width: thin;
+}
+
+.order-data-card-container p {
+    margin: 0px;
+}
+
+h3 {
+    color: var(--header-item-color);
+}

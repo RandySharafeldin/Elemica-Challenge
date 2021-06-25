@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card class="mat-elevation-z0">
     <mat-card-title>
         <h3>
             {{data.sectionTitle}}
@@ -14,24 +14,13 @@
 
             <div *ngIf="this.displayDateSelector">
                 <mat-form-field appearance="outline" style="font-size: 12px; width: 100%;">
-                    <input matInput [matDatepicker]="picker">
+                    <input matInput [matDatepicker]="picker" (dateInput)="dateChanged($event)" [required]="true">
                     <mat-label>Expected Ship Date</mat-label>
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
+                    <mat-hint>Required</mat-hint>
                 </mat-form-field>
             </div>
         </div>
     </mat-card-content>
 </mat-card>
-
-<style>
-    mat-card {
-        width: 20vh;
-        margin: 15px;
-        height: 23vh;
-    }
-
-    .order-data-card-container p {
-        margin: 0px;
-    }
-</style>

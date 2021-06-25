@@ -1,22 +1,28 @@
-<div class="mat-card-container">
+<div class="mat-card-container" style="padding-top: 5vh;">
     <mat-card class="card">
         <mat-card-header>
             <div class="title-container">
                 <div class="left-title">
-                    <p><b>{{titlePrefix}}: </b>{{orderTitle}}</p>
-                    <mat-icon>assignment</mat-icon>
-                    <mat-icon>attachment</mat-icon>
+                    <h3 class="header-item"><b>{{titlePrefix}}: </b>{{orderTitle}}</h3>
+                    <mat-icon class="header-item">assignment</mat-icon>
+                    <mat-icon class="header-item">attachment</mat-icon>
                 </div>
                 <div class="right-title">
                     <button class="schedule-button" mat-flat-button>
-                        <p>
+                        <p class="header-item">
                             <mat-icon>add</mat-icon><b>ADD SCHEUDLE</b>
                         </p>
                     </button>
-                    <mat-button-toggle-group>
-                        <mat-button-toggle value="Accept">ACCEPT</mat-button-toggle>
-                        <mat-button-toggle value="Reject">REJECT</mat-button-toggle>
-                        <mat-button-toggle value="Change">CHANGE</mat-button-toggle>
+                    <mat-button-toggle-group class="toggle-group" [(ngModel)]="status">
+                        <mat-button-toggle class="toggle-button" [ngClass]="status === 0 ? this.statusTexts[status].class: ''" [value]="0">
+                            <p><b>ACCEPT</b></p>
+                        </mat-button-toggle>
+                        <mat-button-toggle class="toggle-button" [ngClass]="status === 1 ? this.statusTexts[status].class: ''" [value]="1">
+                            <p><b>REJECT</b></p>
+                        </mat-button-toggle>
+                        <mat-button-toggle class="toggle-button" [ngClass]="status === 2 ? this.statusTexts[status].class: ''" [value]="2">
+                            <p><b>CHANGE</b></p>
+                        </mat-button-toggle>
                     </mat-button-toggle-group>
                 </div>
             </div>
@@ -24,22 +30,23 @@
         <mat-card-content>
             <div>
                 <div style="display: inline-flex;">
-                    <div style="padding: 20px; width: 25%;">
+                    <div style="padding: 20px; width: 100%;">
                         <app-shipping-data-pannel></app-shipping-data-pannel>
                     </div>
-                    <div style="display: inline-flex; ">
+                    <div style="display: flex; justify-content: flex-end; width: 100%;">
                         <app-order-data-card [data]="this.firstCard"></app-order-data-card>
-                        <app-order-data-card [data]="this.secondCard" [displayDateSelector]="true">
+                        <app-order-data-card [data]="this.secondCard" [displayDateSelector]="true" (dateSelected)="this.dateToSubmit=$event">
                         </app-order-data-card>
                         <app-order-data-card [data]="this.thirdCard"></app-order-data-card>
                     </div>
                 </div>
-                <div style="margin-left: 35%; background-color: rgb(202, 238, 202); margin-right: 15px;">
-                    <span>
-                        <p>
-                            <mat-icon>{{statusTexts[status].iconName}}</mat-icon> {{statusTexts[status].text}}
+                <div [ngClass]="statusTexts[status].class" class="status-container">
+                    <div style="display: flex; align-items: center;">
+                        <mat-icon>{{statusTexts[status].iconName}}</mat-icon>
+                        <p style="margin: auto;">
+                            {{statusTexts[status].text}}
                         </p>
-                    </span>
+                    </div>
                 </div>
                 <div style="width: 100%; padding-bottom: 20px;">
                     <app-details-expanse></app-details-expanse>
@@ -48,47 +55,10 @@
         </mat-card-content>
     </mat-card>
 </div>
-
-
-
-<style>
-    mat-card {
-        padding: 0;
-    }
-
-    mat-card-header {
-        background: lightblue;
-    }
-
-    .mat-card-container {
-        display: flex;
-        justify-content: center;
-        align-content: center;
-    }
-
-    .card {
-        width: 55vw;
-        height: fit-content;
-    }
-
-    .title-container {
-        display: flex;
-        width: 100%;
-    }
-
-    .left-title {
-        width: 50%;
-        display: flex;
-        align-items: center;
-    }
-
-    .right-title {
-        width: 50%;
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    mat-icon.schedule-button {
-        vertical-align: center;
-    }
-</style>
+<div class="bottom-container">
+    <div class="submit-section">
+        <div class="button-container">
+            <button mat-button (click)="submitDate()">Submit Confirmation</button>
+        </div>
+    </div>
+</div>

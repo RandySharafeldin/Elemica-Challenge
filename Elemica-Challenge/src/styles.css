@@ -1,4 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { height: 100%; background-color: rgb(232, 235, 235);;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root {
+    --header-item-color: rgb(127, 147, 235);
+    --header-background: rgb(227, 242, 247);
+    --status-reject-color: rgb(240, 149, 167);
+    --status-accept-color: rgb(202, 238, 202);
+    --status-change-color: rgb(243, 243, 154);
+}
+
+.mat-button-toggle-label-content{
+    line-height: 0px !important;
+    padding: 15px 10px 10px 10px !important;
+  }

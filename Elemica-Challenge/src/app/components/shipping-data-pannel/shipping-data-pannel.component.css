@@ -1,0 +1,23 @@
+.shipping-data-container {
+    display: block;
+    width: 100%;
+}
+
+.shipping-data-container p {
+    margin: 5px;
+}
+
+mat-divider {
+    height: 30vh;
+    width: 10px !important;
+    position: inherit !important;
+}
+
+.order-number-container {
+    display: flex;
+    font-size: 12px;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: rgb(145, 140, 140);
+}
