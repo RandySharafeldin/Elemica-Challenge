@@ -9,6 +9,11 @@ mat-card {
     border-width: thin;
 }
 
+mat-form-field {
+    font-size: 12px; 
+    width: 100%;
+}
+
 .order-data-card-container p {
     margin: 0px;
 }

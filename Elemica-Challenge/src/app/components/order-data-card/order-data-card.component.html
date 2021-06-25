@@ -13,7 +13,7 @@
             <p>{{data.secondData}}</p>
 
             <div *ngIf="this.displayDateSelector">
-                <mat-form-field appearance="outline" style="font-size: 12px; width: 100%;">
+                <mat-form-field appearance="outline">
                     <input matInput [matDatepicker]="picker" (dateInput)="dateChanged($event)" [required]="true">
                     <mat-label>Expected Ship Date</mat-label>
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>

@@ -1,0 +1,25 @@
+.details-container {
+    display: flex; width: 100%; justify-content: center;
+}
+
+mat-accordion {
+    flex-shrink: 0; 
+    width: 95%
+}
+
+mat-expansion-panel {
+    background: rgb(250, 245, 245);
+}
+
+.panel-info-container {
+    display: inline-flex;
+}
+
+.info-column {
+    display: block;
+    padding-right: 25px;
+}
+
+.info-column p {
+    margin: 0px;
+}

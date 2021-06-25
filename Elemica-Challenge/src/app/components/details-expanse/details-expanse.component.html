@@ -1,12 +1,12 @@
-<div style="display: flex; width: 100%; justify-content: center;">
-    <mat-accordion style="flex-shrink: 0; width: 95%">
-        <mat-expansion-panel [expanded]="true" class="mat-elevation-z0" style="background: rgb(250, 245, 245);">
+<div class="details-container">
+    <mat-accordion>
+        <mat-expansion-panel [expanded]="true" class="mat-elevation-z0">
             <mat-expansion-panel-header>
                 <mat-panel-title>
                     <b>Additional Details</b>
                 </mat-panel-title>
             </mat-expansion-panel-header>
-            <div class="panel-info-container" style="height: fit-content; padding-bottom: 0px;">
+            <div class="panel-info-container">
                 <div class="info-column">
                     <p><b>Product Grade Description:</b></p>
                     <p>Corax N 339</p>
@@ -29,17 +29,3 @@
         </mat-expansion-panel>
     </mat-accordion>
 </div>
-<style>
-    .panel-info-container {
-        display: inline-flex;
-    }
-
-    .info-column {
-        display: block;
-        padding-right: 25px;
-    }
-
-    .info-column p {
-        margin: 0px;
-    }
-</style>

@@ -90,6 +90,26 @@ mat-card-header {
     margin-right: 20px;
 }
 
+.upper-content-container {
+    display: inline-flex;
+}
+
+.left-content {
+    padding: 20px; 
+    width: 100%;
+}
+
+.right-content {
+    display: flex; 
+    justify-content: flex-end; 
+    width: 100%;
+}
+
+.warning-container {
+    display: flex; 
+    align-items: center;
+}
+
 .toggle-group {
     min-width: fit-content;
     height: 60%;
@@ -106,6 +126,11 @@ mat-card-header {
     justify-content: center;
 }
 
+.expanse-container {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
 .submit-section {
     margin-top: 5vh;
     display: flex;
@@ -113,6 +138,7 @@ mat-card-header {
     width: 80%;
     height: 10vh;
     background-color: white;
+    box-shadow:0px 0px 3px rgb(172, 169, 169) inset;
 }
 
 .button-container {

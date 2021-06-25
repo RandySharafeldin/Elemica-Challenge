@@ -29,11 +29,11 @@
         </mat-card-header>
         <mat-card-content>
             <div>
-                <div style="display: inline-flex;">
-                    <div style="padding: 20px; width: 100%;">
+                <div class="upper-content-container">
+                    <div class="left-content">
                         <app-shipping-data-pannel></app-shipping-data-pannel>
                     </div>
-                    <div style="display: flex; justify-content: flex-end; width: 100%;">
+                    <div class="right-content">
                         <app-order-data-card [data]="this.firstCard"></app-order-data-card>
                         <app-order-data-card [data]="this.secondCard" [displayDateSelector]="true" (dateSelected)="this.dateToSubmit=$event">
                         </app-order-data-card>
@@ -41,14 +41,14 @@
                     </div>
                 </div>
                 <div [ngClass]="statusTexts[status].class" class="status-container">
-                    <div style="display: flex; align-items: center;">
+                    <div class="warning-container">
                         <mat-icon>{{statusTexts[status].iconName}}</mat-icon>
                         <p style="margin: auto;">
                             {{statusTexts[status].text}}
                         </p>
                     </div>
                 </div>
-                <div style="width: 100%; padding-bottom: 20px;">
+                <div class="expanse-container">
                     <app-details-expanse></app-details-expanse>
                 </div>
             </div>
