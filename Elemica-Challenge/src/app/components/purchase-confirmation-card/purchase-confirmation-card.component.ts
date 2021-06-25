@@ -9,10 +9,13 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class PurchaseConfirmationCardComponent implements OnInit {
 
+  //here we set the text to be used in the component
+
   titlePrefix = "Line 0010"
   orderTitle = "NaCl (Sodium Chloride)"
   dateToSubmit: string | undefined;
 
+  //these status values change based on the value of the select toggle button
   status = 0;
 
   statusTexts = [
@@ -33,6 +36,7 @@ export class PurchaseConfirmationCardComponent implements OnInit {
     }
   ]
 
+  //more default text to send to our order data cards
   firstCard = {
     sectionTitle: "Quantity",
     firstDataTitle: "Ordered",
@@ -62,6 +66,9 @@ export class PurchaseConfirmationCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //the logic for submission is as follows:
+  //if accept is selected we check that the date is valid and if so we display a success if not we prompt for a valid date
+  //if reject or change is selected we do not check for a date we only display an appropriate message.
   submitDate() {
     if (this.status === 0) {
       if (this.dateToSubmit) {

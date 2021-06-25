@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-//import * as EventEmitter from 'events';
 
 @Component({
   selector: 'app-order-data-card',
